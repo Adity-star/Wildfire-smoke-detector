@@ -1,0 +1,51 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/train
+      hash: md5
+      md5: 12073c83c5e47d25e2a563dbba37a8b2.dir
+      size: 20262836
+      nfiles: 1033
+    - path: params.yaml
+      hash: md5
+      md5: 4399d7ee2ff1bab7e3efa8472c858fae
+      size: 204
+    - path: src/train.py
+      hash: md5
+      md5: 135948a717877160d2842eeb23bb0d85
+      size: 3071
+    - path: src/utils.py
+      hash: md5
+      md5: 0953e6e4c372576d64a7084eb735145d
+      size: 1883
+    outs:
+    - path: models/model.pt
+      hash: md5
+      md5: 5d31c70681b62d2143518ec497633c48
+      size: 22477546
+    - path: reports/train_metrics.csv
+      hash: md5
+      md5: 2ee974af3770cbdd2d94830d5dea72a8
+      size: 1285
+    - path: reports/train_params.yaml
+      hash: md5
+      md5: fff3f8b86c557c34bf6a8c8598b94fd2
+      size: 1699
+  test:
+    cmd: python src/predict.py
+    deps:
+    - path: data/test
+      hash: md5
+      md5: 6cb8ae7a23d5760b66996ba6379581eb.dir
+      size: 2833508
+      nfiles: 148
+    - path: models/model.pt
+      hash: md5
+      md5: 5d31c70681b62d2143518ec497633c48
+      size: 22477546
+    - path: src/predict.py
+      hash: md5
+      md5: e5df0cdd3f0ceb50c9f694f328432cc0
+      size: 509
