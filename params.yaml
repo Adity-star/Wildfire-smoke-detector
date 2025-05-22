@@ -1,0 +1,9 @@
+name: wildfire_yolov8_exp1
+model_type: yolov8s.pt 
+pretrained: True
+seed: 42
+imgsz: 416
+batch: 16
+epochs: 25
+optimizer: SGD # other choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
+lr0: 0.01  # learning rate 
