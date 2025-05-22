@@ -2,6 +2,9 @@
 
 A machine learning project designed to detect wildfire smoke from images using the state-of-the-art YOLOv8 model. This repository contains everything needed to train, evaluate, and deploy the model for real-time image classification. It integrates with **MLflow** for model tracking and **Gradio** for easy model deployment. Docker is used to ensure consistency across environments and streamline deployment.
 
+![image](https://github.com/user-attachments/assets/25eaecfc-ee8d-4ed5-940c-a078ecbe7d3d)
+
+
 ---
 
 ## 🚀 Features
